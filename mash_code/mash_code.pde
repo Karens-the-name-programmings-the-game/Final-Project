@@ -4,6 +4,7 @@ void setup() {
 }
 
 void draw() {
+  
   //intro screen
   background(0);
   //title Welcome to MASH!
