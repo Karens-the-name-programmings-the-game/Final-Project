@@ -1,4 +1,5 @@
-ArrayList <Items> category = new ArrayList <Items>();
+ArrayList <MASH> category = new ArrayList <MASH>();
 
-class Items {
+class MASH {
+  ArrayList <> spouses = new ArrayList <>();
   
