@@ -16,7 +16,8 @@ void draw() {
   textSize(200);
   text("M A S H", width/2-400, height/2+75);
   //pick your gender:
-
+text("boy", width/2-300, height/2+200, 175, 85);
+   fill(255);
   rect(width/2-275, height/2+50, 175, 85);
   rect(width/2+190, height/2+50, 175, 85);
 
