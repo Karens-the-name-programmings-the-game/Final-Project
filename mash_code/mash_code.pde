@@ -33,7 +33,10 @@ void draw() {
     //girl
     rect(width/2+190, height/2+50, 175, 85);
     
-  
+    if(mouseX > width/2+190 && mouseX < width/2+265 && mouseY > height/2+50 && mouseY < height/2+135) {
+      if(mousePressed=true){
+        //code for takes you to next screen
+      }
 
 }
 
