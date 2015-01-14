@@ -1,5 +1,8 @@
 ArrayList <MASH> category = new ArrayList <MASH>();
 
+category.add(new(MASH));
+if(
+
 class MASH {
   String[] spousem1 = {
     "Justin Bieber", "Marilyn Manson", "Barack Obama", "Kanye West", "Kim Jong Un"
@@ -18,5 +21,10 @@ class MASH {
   }
   
   //class methods
-  void 
+  void spousem1() {
+    for(int i = 0; i<= spousem1.length; i++) {
+      textSize(20);
+      text(spousem1[i], 60, 230 + i*15);
+    }
+  }
 
