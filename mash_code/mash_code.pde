@@ -21,7 +21,7 @@ void draw() {
   textSize(200);
   text("M A S H", width/2-400, height/2+75);
 
-  //pick your gender:
+  //pick your gender: 
 
   //male button
   fill(255);
