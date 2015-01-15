@@ -1,16 +1,16 @@
 ArrayList <MASH> category = new ArrayList <MASH>();
-int level;
+int screen;
 //int N = random(1, 15);
 //int currentN;
 
 void setup() {
   size(displayWidth, displayHeight);
-  level = 0;
+  screen = 0;
 }
 
 void draw() {
 
-  if (level = 1) {
+  if (screen = 1) {
     //intro screen
     frameRate(10);
     background(0);
@@ -36,9 +36,10 @@ void draw() {
 
     if (mouseX > width/2-275 && mouseX < width/2-450 && mouseY > height/2+50 && mouseY < height/2+135) {
       if (mousePressed=true) {
-        //code for takes you to next screen
+        screen=3
       }
-
+    }
+    if (screen=2) {
       //girl button
       fill(255);
       text("girl", width/2+105, height/2+50, 175, 85);
@@ -47,12 +48,14 @@ void draw() {
 
       if (mouseX > width/2+190 && mouseX < width/2+265 && mouseY > height/2+50 && mouseY < height/2+135) {
         if (mousePressed=true) {
-          //code for takes you to next screen
+          screen=3
         }
       }
     }
+    
+    if (screen=3) {
+      
   }
-
   //counting
 
   //add items and categories
