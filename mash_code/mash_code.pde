@@ -9,13 +9,15 @@ String savedJob = new String();
 String savedChildren = new String();
 String savedPet = new String();
 String savedHoneymoon = new String();
-//int N = random(1, 15);
-//int currentN;
+String savedHome = new String();
+String savedNumber = new String();
+int n, p;
 
 void setup() {
   size(displayWidth, displayHeight);
   screen = 0;
   gender = 0;
+  p = 0;
 }
 
 void draw() {
@@ -40,7 +42,7 @@ void draw() {
   }
 
   //prediction selection screens
-  
+
   //spouse
   if (screen == 2) {
     background(255);
@@ -49,9 +51,9 @@ void draw() {
       text("SPOUSE", width/2, 150);
       strokeWeight(5);
       line(width/2-100, 160, width/2+100, 160);
-      for (int i = 1; i< mycategory.spousem1.length+1; i++) {
+      for (int i = 1; i< mycategory.spousem1.size ()+1; i++) {
         textAlign(LEFT);
-        text(i + "." + " " + mycategory.spousem1[i-1], width/2-200, height/2-150+60*(i-1));
+        text(i + "." + " " + mycategory.spousem1.get(i-1), width/2-200, height/2-150+60*(i-1));
       }
       textAlign(CENTER);
       int swidth = width/2-70;
@@ -70,9 +72,9 @@ void draw() {
       text("SPOUSE", width/2, 150);
       strokeWeight(5);
       line(width/2-100, 160, width/2+100, 160);
-      for (int i = 1; i< mycategory.spousef1.length+1; i++) {
+      for (int i = 1; i< mycategory.spousef1.size ()+1; i++) {
         textAlign(LEFT);
-        text(i + "." + " " + mycategory.spousef1[i-1], width/2-200, height/2-150+60*(i-1));
+        text(i + "." + " " + mycategory.spousef1.get(i-1), width/2-200, height/2-150+60*(i-1));
       }
       textAlign(CENTER);
       int swidth = width/2-70;
@@ -94,9 +96,9 @@ void draw() {
     text("PLACE", width/2, 150);
     strokeWeight(5);
     line(width/2-100, 160, width/2+100, 160);
-    for (int i = 1; i< mycategory.loc1.length+1; i++) {
+    for (int i = 1; i< mycategory.loc1.size ()+1; i++) {
       textAlign(LEFT);
-      text(i + "." + " " + mycategory.loc1[i-1], width/2-200, height/2-150+60*(i-1));
+      text(i + "." + " " + mycategory.loc1.get(i-1), width/2-200, height/2-150+60*(i-1));
     }
     textAlign(CENTER);
     int swidth = width/2-70;
@@ -110,16 +112,16 @@ void draw() {
     text(typing, swidth+350, sheight-10);
     savedLoc = typing;
   }
-  
+
   //type of car
   if (screen == 4) {
     background(255);
     text("TYPE OF CAR", width/2, 150);
     strokeWeight(5);
     line(width/2-150, 160, width/2+150, 160);
-    for (int i = 1; i< mycategory.car1.length+1; i++) {
+    for (int i = 1; i< mycategory.car1.size ()+1; i++) {
       textAlign(LEFT);
-      text(i + "." + " " + mycategory.car1[i-1], width/2-200, height/2-150+60*(i-1));
+      text(i + "." + " " + mycategory.car1.get(i-1), width/2-200, height/2-150+60*(i-1));
     }
     textAlign(CENTER);
     int swidth = width/2-70;
@@ -133,16 +135,16 @@ void draw() {
     text(typing, swidth+350, sheight-10);
     savedCar = typing;
   }
-  
+
   //job
   if (screen == 5) {
     background(255);
     text("JOB", width/2, 150);
     strokeWeight(5);
     line(width/2-70, 160, width/2+70, 160);
-    for (int i = 1; i< mycategory.job1.length+1; i++) {
+    for (int i = 1; i< mycategory.job1.size ()+1; i++) {
       textAlign(LEFT);
-      text(i + "." + " " + mycategory.job1[i-1], width/2-200, height/2-150+60*(i-1));
+      text(i + "." + " " + mycategory.job1.get(i-1), width/2-200, height/2-150+60*(i-1));
     }
     textAlign(CENTER);
     int swidth = width/2-70;
@@ -156,16 +158,16 @@ void draw() {
     text(typing, swidth+350, sheight-10);
     savedJob = typing;
   }
-  
+
   //number of children
   if (screen == 6) {
     background(255);
     text("NUMBER OF CHILDREN", width/2, 150);
     strokeWeight(5);
     line(width/2-250, 160, width/2+250, 160);
-    for (int i = 1; i< mycategory.children1.length+1; i++) {
+    for (int i = 1; i< mycategory.children1.size ()+1; i++) {
       textAlign(LEFT);
-      text(i + "." + " " + mycategory.children1[i-1], width/2-200, height/2-150+60*(i-1));
+      text(i + "." + " " + mycategory.children1.get(i-1), width/2-200, height/2-150+60*(i-1));
     }
     textAlign(CENTER);
     int swidth = width/2-70;
@@ -179,16 +181,16 @@ void draw() {
     text(typing, swidth+350, sheight-10);
     savedChildren = typing;
   }
-  
+
   //type of pet
   if (screen == 7) {
     background(255);
     text("PET", width/2, 150);
     strokeWeight(5);
     line(width/2-70, 160, width/2+70, 160);
-    for (int i = 1; i< mycategory.pet1.length+1; i++) {
+    for (int i = 1; i< mycategory.pet1.size ()+1; i++) {
       textAlign(LEFT);
-      text(i + "." + " " + mycategory.pet1[i-1], width/2-200, height/2-150+60*(i-1));
+      text(i + "." + " " + mycategory.pet1.get(i-1), width/2-200, height/2-150+60*(i-1));
     }
     textAlign(CENTER);
     int swidth = width/2-70;
@@ -202,16 +204,16 @@ void draw() {
     text(typing, swidth+350, sheight-10);
     savedPet = typing;
   }
-  
+
   //honeymoon location
   if (screen == 8) {
     background(255);
     text("HONEYMOON LOCATION", width/2, 150);
     strokeWeight(5);
     line(width/2-250, 160, width/2+250, 160);
-    for (int i = 1; i< mycategory.honeymoon1.length+1; i++) {
+    for (int i = 1; i< mycategory.honeymoon1.size ()+1; i++) {
       textAlign(LEFT);
-      text(i + "." + " " + mycategory.honeymoon1[i-1], width/2-200, height/2-150+60*(i-1));
+      text(i + "." + " " + mycategory.honeymoon1.get(i-1), width/2-200, height/2-150+60*(i-1));
     }
     textAlign(CENTER);
     int swidth = width/2-70;
@@ -226,21 +228,89 @@ void draw() {
     savedHoneymoon = typing;
   }
 
-  //counting
+  //home
+  if (screen ==9) {
+    background(255);
+    text("TYPE OF HOME", width/2, 150);
+    strokeWeight(5);
+    line(width/2-150, 160, width/2+150, 160);
+    for (int i = 1; i< mycategory.home.size ()+1; i++) {
+      textAlign(LEFT);
+      text(i + "." + " " + mycategory.home.get(i-1), width/2-200, height/2-150+60*(i-1));
+    }
+    textAlign(CENTER);
+    int swidth = width/2-70;
+    int sheight = height/2+180;
+    text("Choose your number!", swidth, sheight);
+    fill(255);
+    strokeWeight(1);
+    rect(swidth+300, sheight-50, 100, 50);
+    fill(0);
+    textSize(40);
+    text(typing, swidth+350, sheight-10);
+    savedHome = typing;
+  }
 
-    //    if (screen == 3) {
-  //      background(255);
-  //      textAlign(LEFT);
-  //      //counting
-  //
-  //
-  //      //add items and categories
-  //      MASH.add(new category());
+  //pick a number
+  if (screen == 10) {
+    background(255);
+    fill(0);
+    text("Pick a number between 1 and 15!", width/2, height/2-100);
+    fill(255);
+    rect(width/2-50, height/2, 100, 50);
+    fill(0);
+    textSize(40);
+    text(typing, width/2, height/2+40);
+    savedNumber = typing;
+  }
 
-  //  for (int i = 0; i<=Mash.spousem1.length 
-  //  if (
-  //    }
+  //MASH!
+  if (screen == 11) {
+    background(255);
+    textAlign(CENTER);
+    textSize(60);
+    text("M A S H", width/2, 100);
+    textAlign(LEFT);
+    textSize(32); 
+    text("Spouse", 60, 200); 
+    text("Place", 270, 200); 
+    text("Car", 460, 200); 
+    text("Job", 620, 200); 
+    text("Number of Children", 740, 200); 
+    text("Pet", 1100, 200); 
+    text("Honeymoon", 1200, 200);
+    mycategory.getSpouse1();
+    mycategory.getLoc1();
+    mycategory.getCar1();
+    mycategory.getJob1();
+    mycategory.getChildren1();
+    mycategory.getPet1();
+    mycategory.getHoneymoon1();
+
+    //counting
+
+    n = Integer.parseInt(savedNumber);
+    if (gender == 1) {
+      if (p+n < mycategory.spousem1.size()) {
+        mycategory.removeItem(mycategory.spousem1, p+n-1);
+        mycategory.crossSpouse1(p+n-1);
+        p=p+n;
+      }
+      if (p+n < mycategory.spousem1.size() + mycategory.loc1.size()) {
+        mycategory.removeItem(mycategory.loc1, p+n-1);
+        mycategory.crossLoc1(p+n-1);
+        p=p+n;
+      }
+    }
+  } else if (gender == 2) {
+    if (n < mycategory.spousef1.size()) {
+      mycategory.removeItem(mycategory.spousef1, p+n-1);
+      mycategory.crossSpouse1(p+n-1);
+      p = n;
+    }
+  }
 }
+
 
 
 int currentScreen() {
@@ -298,24 +368,22 @@ void keyPressed() {
     typing = "";
     if (screen == 2) {
       screen = 3;
-    }
-    else if (screen == 3) {
+    } else if (screen == 3) {
       screen = 4;
-    }
-    else if (screen == 4) {
+    } else if (screen == 4) {
       screen = 5;
-    }
-    else if (screen == 5) {
+    } else if (screen == 5) {
       screen = 6;
-    }
-    else if (screen == 6) {
+    } else if (screen == 6) {
       screen = 7;
-    }
-    else if (screen == 7) {
+    } else if (screen == 7) {
       screen = 8;
-    }
-    else if (screen == 8) {
+    } else if (screen == 8) {
       screen = 9;
+    } else if (screen ==9) {
+      screen = 10;
+    } else if (screen == 10) {
+      screen = 11;
     }
   } else {
     typing = typing + key;
