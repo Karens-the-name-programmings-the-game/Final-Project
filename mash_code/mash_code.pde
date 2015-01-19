@@ -11,13 +11,16 @@ String savedPet = new String();
 String savedHoneymoon = new String();
 String savedHome = new String();
 String savedNumber = new String();
-int n, p;
+StringList temp = new StringList();
+String item = "";
+int n, p, v;
 
 void setup() {
   size(displayWidth, displayHeight);
   screen = 0;
   gender = 0;
   p = 0;
+  v = 0;
 }
 
 void draw() {
@@ -267,9 +270,6 @@ void draw() {
   //MASH!
   if (screen == 11) {
     background(255);
-    textAlign(CENTER);
-    textSize(60);
-    text("M A S H", width/2, 100);
     textAlign(LEFT);
     textSize(32); 
     text("Spouse", 60, 200); 
@@ -286,27 +286,97 @@ void draw() {
     mycategory.getChildren1();
     mycategory.getPet1();
     mycategory.getHoneymoon1();
+    mycategory.getHome();
 
     //counting
 
     n = Integer.parseInt(savedNumber);
-    if (gender == 1) {
-      if (p+n < mycategory.spousem1.size()) {
-        mycategory.removeItem(mycategory.spousem1, p+n-1);
-        mycategory.crossSpouse1(p+n-1);
+    temp = mycategory.createTemp(gender);
+    v = temp.size();
+    p=0;
+    p=p+n;
+    while (v>3) {
+      item = temp.get(p);
+
+      if (gender ==1) {
+        if (mycategory.spousem1.hasValue(item) && mycategory.spousem1.size() > 1) {
+          mycategory.removeItem(mycategory.spousem1, item);
+          temp.remove(p);
+          mycategory.crossSpouse1(p);
+        } else if (mycategory.loc1.hasValue(item) && mycategory.loc1.size() > 1) {
+          mycategory.removeItem(mycategory.loc1, item);
+          temp.remove(p);
+          mycategory.crossLoc1(p);
+        } else if (mycategory.car1.hasValue(item) && mycategory.car1.size() > 1) {
+          mycategory.removeItem(mycategory.car1, item);
+          temp.remove(p);
+          mycategory.crossCar1(p);
+        } else if (mycategory.job1.hasValue(item) && mycategory.job1.size() > 1) {
+          mycategory.removeItem(mycategory.job1, item);
+          temp.remove(p);
+          mycategory.crossJob1(p);
+        } else if (mycategory.children1.hasValue(item) && mycategory.children1.size() > 1) {
+          mycategory.removeItem(mycategory.children1, item);
+          temp.remove(p);
+          mycategory.crossChildren1(p);
+        } else if (mycategory.pet1.hasValue(item) && mycategory.pet1.size() > 1) {
+          mycategory.removeItem(mycategory.pet1, item);
+          temp.remove(p);
+          mycategory.crossPet1(p);
+        } else if (mycategory.honeymoon1.hasValue(item) && mycategory.honeymoon1.size() > 1) {
+          mycategory.removeItem(mycategory.honeymoon1, item);
+          temp.remove(p);
+          mycategory.crossHoneymoon1(p);
+        } else if (mycategory.home.hasValue(item) && mycategory.home.size() > 1) {
+          mycategory.removeItem(mycategory.home, item);
+          temp.remove(p);
+          mycategory.crossHome(p);
+        }
         p=p+n;
-      }
-      if (p+n < mycategory.spousem1.size() + mycategory.loc1.size()) {
-        mycategory.removeItem(mycategory.loc1, p+n-1);
-        mycategory.crossLoc1(p+n-1);
+        v = temp.size();
+        if (p>=v) {
+          p=p-v;
+        }
+      } else if ( gender == 2) {
+        if (mycategory.spousef1.hasValue(item) && mycategory.spousef1.size() > 1) {
+          mycategory.removeItem(mycategory.spousef1, item);
+          temp.remove(p);
+          mycategory.crossSpouse1(p);
+        } else if (mycategory.loc1.hasValue(item) && mycategory.loc1.size() > 1) {
+          mycategory.removeItem(mycategory.loc1, item);
+          temp.remove(p);
+          mycategory.crossLoc1(p);
+        } else if (mycategory.car1.hasValue(item) && mycategory.car1.size() > 1) {
+          mycategory.removeItem(mycategory.car1, item);
+          temp.remove(p);
+          mycategory.crossCar1(p);
+        } else if (mycategory.job1.hasValue(item) && mycategory.job1.size() > 1) {
+          mycategory.removeItem(mycategory.job1, item);
+          temp.remove(p);
+          mycategory.crossJob1(p);
+        } else if (mycategory.children1.hasValue(item) && mycategory.children1.size() > 1) {
+          mycategory.removeItem(mycategory.children1, item);
+          temp.remove(p);
+          mycategory.crossChildren1(p);
+        } else if (mycategory.pet1.hasValue(item) && mycategory.pet1.size() > 1) {
+          mycategory.removeItem(mycategory.pet1, item);
+          temp.remove(p);
+          mycategory.crossPet1(p);
+        } else if (mycategory.honeymoon1.hasValue(item) && mycategory.honeymoon1.size() > 1) {
+          mycategory.removeItem(mycategory.honeymoon1, item);
+          temp.remove(p);
+          mycategory.crossHoneymoon1(p);
+        } else if (mycategory.home.hasValue(item) && mycategory.home.size() > 1) {
+          mycategory.removeItem(mycategory.home, item);
+          temp.remove(p);
+          mycategory.crossHome(p);
+        }
         p=p+n;
+        v = temp.size();
+        if (p>=v) {
+          p=p-v;
+        }
       }
-    }
-  } else if (gender == 2) {
-    if (n < mycategory.spousef1.size()) {
-      mycategory.removeItem(mycategory.spousef1, p+n-1);
-      mycategory.crossSpouse1(p+n-1);
-      p = n;
     }
   }
 }
