@@ -96,6 +96,11 @@ void draw() {
       textSize(40);
       text(typing, swidth+350, sheight-10);
       savedSpouse = typing;
+      if(keyPressed) {
+        if(key == BACKSPACE) {
+          typing = "";
+        }
+      }
     }
   }
 
@@ -120,6 +125,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedLoc = typing;
+    if(keyPressed) {
+        if(key == BACKSPACE) {
+          typing = "";
+        }
+      }
   }
 
   //type of car
@@ -143,6 +153,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedCar = typing;
+    if(keyPressed) {
+        if(key == BACKSPACE) {
+          typing = "";
+        }
+      }
   }
 
   //job
@@ -166,6 +181,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedJob = typing;
+    if(keyPressed) {
+        if(key == BACKSPACE) {
+          typing = "";
+        }
+      }
   }
 
   //number of children
@@ -189,6 +209,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedChildren = typing;
+    if(keyPressed) {
+        if(key == BACKSPACE) {
+          typing = "";
+        }
+      }
   }
 
   //type of pet
@@ -212,6 +237,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedPet = typing;
+    if(keyPressed) {
+        if(key == BACKSPACE) {
+          typing = "";
+        }
+      }
   }
 
   //honeymoon location
@@ -235,6 +265,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedHoneymoon = typing;
+    if(keyPressed) {
+        if(key == BACKSPACE) {
+          typing = "";
+        }
+      }
   }
 
   //home
@@ -258,6 +293,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedHome = typing;
+    if(keyPressed) {
+        if(key == BACKSPACE) {
+          typing = "";
+        }
+      }
   }
 
   //pick a number
@@ -271,6 +311,11 @@ void draw() {
     textSize(40);
     text(typing, width/2, height/2+40);
     savedNumber = typing;
+    if(keyPressed) {
+        if(key == BACKSPACE) {
+          typing = "";
+        }
+      }
   }
 
   //MASH!
@@ -410,11 +455,11 @@ void draw() {
       matched = matched+1;
     }
 
-    if (matched > 1) {
+    if (matched >= 1) {
       textSize(100);
       text("You win!", width/2, 200);
     }
-    if (matched <= 1) {
+    if (matched < 1) {
       textSize(100);
       text("You lose!", width/2, 200);
     }
