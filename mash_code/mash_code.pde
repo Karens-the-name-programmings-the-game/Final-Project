@@ -14,6 +14,7 @@ String savedNumber = new String();
 String item = "";
 String spouseName, locName, carName, jobName, childrenName, petName, honeymoonName, homeName;
 int n, p, sn, matched;
+int predictionSpouse, predictionLoc, predictionCar, predictionJob, predictionChildren, predictionPet, predictionHoneymoon, predictionHome;
 
 void setup() {
   size(displayWidth, displayHeight);
@@ -23,6 +24,7 @@ void setup() {
 }
 
 void draw() {
+  println("savedSpouse: " + savedSpouse + ", spouseName: " + spouseName);
   category mycategory = new category();
 
   //intro screen
@@ -68,8 +70,8 @@ void draw() {
       textSize(40);
       text(typing, swidth+350, sheight-10);
       savedSpouse = typing;
-      if(keyPressed) {
-        if(key == BACKSPACE) {
+      if (keyPressed) {
+        if (key == BACKSPACE) {
           typing = "";
         }
       }
@@ -94,8 +96,8 @@ void draw() {
       textSize(40);
       text(typing, swidth+350, sheight-10);
       savedSpouse = typing;
-      if(keyPressed) {
-        if(key == BACKSPACE) {
+      if (keyPressed) {
+        if (key == BACKSPACE) {
           typing = "";
         }
       }
@@ -123,11 +125,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedLoc = typing;
-    if(keyPressed) {
-        if(key == BACKSPACE) {
-          typing = "";
-        }
+    if (keyPressed) {
+      if (key == BACKSPACE) {
+        typing = "";
       }
+    }
   }
 
   //type of car
@@ -151,11 +153,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedCar = typing;
-    if(keyPressed) {
-        if(key == BACKSPACE) {
-          typing = "";
-        }
+    if (keyPressed) {
+      if (key == BACKSPACE) {
+        typing = "";
       }
+    }
   }
 
   //job
@@ -179,11 +181,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedJob = typing;
-    if(keyPressed) {
-        if(key == BACKSPACE) {
-          typing = "";
-        }
+    if (keyPressed) {
+      if (key == BACKSPACE) {
+        typing = "";
       }
+    }
   }
 
   //number of children
@@ -207,11 +209,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedChildren = typing;
-    if(keyPressed) {
-        if(key == BACKSPACE) {
-          typing = "";
-        }
+    if (keyPressed) {
+      if (key == BACKSPACE) {
+        typing = "";
       }
+    }
   }
 
   //type of pet
@@ -235,11 +237,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedPet = typing;
-    if(keyPressed) {
-        if(key == BACKSPACE) {
-          typing = "";
-        }
+    if (keyPressed) {
+      if (key == BACKSPACE) {
+        typing = "";
       }
+    }
   }
 
   //honeymoon location
@@ -263,11 +265,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedHoneymoon = typing;
-    if(keyPressed) {
-        if(key == BACKSPACE) {
-          typing = "";
-        }
+    if (keyPressed) {
+      if (key == BACKSPACE) {
+        typing = "";
       }
+    }
   }
 
   //home
@@ -291,11 +293,11 @@ void draw() {
     textSize(40);
     text(typing, swidth+350, sheight-10);
     savedHome = typing;
-    if(keyPressed) {
-        if(key == BACKSPACE) {
-          typing = "";
-        }
+    if (keyPressed) {
+      if (key == BACKSPACE) {
+        typing = "";
       }
+    }
   }
 
   //pick a number
@@ -309,11 +311,11 @@ void draw() {
     textSize(40);
     text(typing, width/2, height/2+40);
     savedNumber = typing;
-    if(keyPressed) {
-        if(key == BACKSPACE) {
-          typing = "";
-        }
+    if (keyPressed) {
+      if (key == BACKSPACE) {
+        typing = "";
       }
+    }
   }
 
   //MASH!
@@ -414,7 +416,7 @@ void draw() {
         mycategory.crossHome(i);
       }
     }
-    
+
     textSize(60);
     textAlign(CENTER);
     text("Press enter to see your future!", width/2, height-200);
@@ -424,13 +426,23 @@ void draw() {
 
   if (screen == 12) {
     background(255);
+    
+    //change saved strings into integers
+    predictionSpouse = Integer.parseInt(savedSpouse);
+    predictionLoc = Integer.parseInt(savedLoc);
+    predictionCar = Integer.parseInt(savedCar);
+    predictionJob = Integer.parseInt(savedJob);
+    predictionChildren = Integer.parseInt(savedChildren);
+    predictionPet = Integer.parseInt(savedPet);
+    predictionHoneymoon = Integer.parseInt(savedHoneymoon);
+    predictionHome = Integer.parseInt(savedHome);
 
     //match predictions with outcomes
     matched = 0;
-    if (savedSpouse == spouseName) {
+    if (mycategory.spousem1.get(predictionSpouse) == spouseName) {
       matched = matched+1;
     }
-    if (savedLoc == locName) {
+    if (mycategory.loc1.get(predictionLoc) == locName) {
       matched = matched+1;
     }
     if (savedCar == carName) {
@@ -522,6 +534,7 @@ int firstScreen() {
   return screen;
 }
 
+//pick item to cross off
 String getSelectedItem(StringList sl, int sn) {
   int r = int(random(0, sl.size()));
   int n = 0;
@@ -533,6 +546,7 @@ String getSelectedItem(StringList sl, int sn) {
   return sl.get(n);
 }
 
+//use enter to move to next screen
 void keyPressed() {
   if (key == ENTER) {
     saved = typing;
