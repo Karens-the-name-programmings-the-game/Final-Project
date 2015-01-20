@@ -14,21 +14,19 @@ String savedNumber = new String();
 String item = "";
 String spouseName, locName, carName, jobName, childrenName, petName, honeymoonName, homeName;
 int n, p, sn, matched;
-boolean nextScreen;
 
 void setup() {
   size(displayWidth, displayHeight);
   screen = 0;
   gender = 0;
   p = 0;
-  nextScreen = false;
 }
 
 void draw() {
   category mycategory = new category();
 
   //intro screen
-  screen = currentScreen();
+  screen = firstScreen();
 
   //predictions intro screen
   if (screen == 1) {
@@ -320,7 +318,6 @@ void draw() {
 
   //MASH!
   if (screen == 11) {
-    nextScreen = false;
     background(255);
     textAlign(LEFT);
     textSize(32); 
@@ -477,7 +474,7 @@ void draw() {
 
 
 
-int currentScreen() {
+int firstScreen() {
   if (screen == 0) {
     frameRate(10);
     background(0);
