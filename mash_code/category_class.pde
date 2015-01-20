@@ -1,39 +1,4 @@
 class category {
-  //  String spousef1 = {
-  //    "Justin Bieber", "Marilyn Manson", "Barack Obama", "Kanye West", "Kim Jong Un"
-  //  };
-  //  String[] spousem1 = {
-  //    "Miley Cyrus", "Whoopi Goldberg", "Oprah Winfrey", "Betty White", "Kristen Stewart"
-  //  };
-  //
-  //  String[] loc1 = {
-  //    "North Korea", "Pluto", "South Dakota", "A Janitor's Closet", "Walden Pond"
-  //  };
-  //
-  //  String[] car1 = {
-  //    a
-  //  };
-  //
-  //  String[] job1 = {
-  //    "McDonald's Worker", "Lumberjack", "Garbage Collector", "Grave Digger", "TSA Officer"
-  //  };
-  //
-  //  String[] children1 = {
-  //    "0", "69", "One Million", "1000", "-20"
-  //  };
-  //
-  //  String[] pet1 = {
-  //    "Alligator", "Baboon", "Cockroach", "Piranha", "Baby Tiger"
-  //  };
-  //
-  //  String[] honeymoon1 = {
-  //    "Nowhere", "Your Backyard", "Bermuda Triangle", "Saudi Arabia", "Syria"
-  //  };
-  //
-  //  String[] home = {
-  //    "M", "A", "S", "H"
-  //  };
-
   StringList spousem1 = new StringList();
   StringList spousef1 = new StringList();
   StringList loc1 = new StringList();
@@ -130,7 +95,7 @@ class category {
 
   void crossLoc1(int idx) {
     strokeWeight(5);
-    line(166, 243 + idx*50, 331, 243 + idx * 50);
+    line(265, 243 + idx*50, 420, 243 + idx * 50);
   }
 
   void getCar1() {
@@ -142,7 +107,7 @@ class category {
 
   void crossCar1(int idx) {
     strokeWeight(5);
-    line(356, 243 + idx*50, 521, 243 + idx * 50);
+    line(455, 243 + idx*50, 590, 243 + idx * 50);
   }
 
   void getJob1() {
@@ -154,7 +119,7 @@ class category {
 
   void crossJob1(int idx) {
     strokeWeight(5);
-    line(516, 243 + idx*50, 681, 243 + idx * 50);
+    line(615, 243 + idx*50, 780, 243 + idx * 50);
   }
 
   void getChildren1() {
@@ -166,7 +131,7 @@ class category {
 
   void crossChildren1(int idx) {
     strokeWeight(5);
-    line(636, 243 + idx*50, 801, 243 + idx * 50);
+    line(845, 243 + idx*50, 960, 243 + idx * 50);
   }
 
   void getPet1() {
@@ -178,7 +143,7 @@ class category {
 
   void crossPet1(int idx) {
     strokeWeight(5);
-    line(896, 243 + idx*50, 1061, 243 + idx * 50);
+    line(1095, 243 + idx*50, 1190, 243 + idx * 50);
   }
 
   void getHoneymoon1() {
@@ -190,19 +155,19 @@ class category {
 
   void crossHoneymoon1(int idx) {
     strokeWeight(5);
-    line(996, 243 + idx*50, 1161, 243 + idx * 50);
+    line(1195, 243 + idx*50, 1360, 243 + idx * 50);
   }
 
   void getHome() {
     for (int i = 0; i< home.size (); i++) {
       textSize(60);
-      text(home.get(i), width/2-100+ i*20, 100);
+      text(home.get(i), width/2-100+ i*100, 100);
     }
   }
 
   void crossHome(int idx) {
     strokeWeight(5);
-    line(width/2-100+ idx*20, 80, width/2-50+ idx*20, 80);
+    line(width/2-100+ idx*100, 80, width/2-50+ idx*100, 80);
   }
 
 
