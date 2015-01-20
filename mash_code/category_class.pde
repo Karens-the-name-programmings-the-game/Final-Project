@@ -59,10 +59,10 @@ class category {
     honeymoon1.append("Saudi Arabia");
     honeymoon1.append("Syria");
 
-    home.append("M");
-    home.append("A");
-    home.append("S");
-    home.append("H");
+    home.append("Mansion");
+    home.append("Apartment");
+    home.append("Shack");
+    home.append("House");
   }
 
   //class methods
@@ -160,8 +160,9 @@ class category {
 
   void getHome() {
     for (int i = 0; i< home.size (); i++) {
-      textSize(60);
-      text(home.get(i), width/2-100+ i*100, 100);
+      textAlign(CENTER);
+      textSize(50);
+      text(home.get(i), width/2-400+ i*300, 100);
     }
   }
 
