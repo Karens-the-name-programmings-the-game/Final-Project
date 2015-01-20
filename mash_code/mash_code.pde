@@ -462,7 +462,7 @@ void draw() {
     }
     textSize(40);
     text("Once upon a time, you met " + spouseName 
-      + " and got \n married. You had your honeymoon \n in " 
+      + " \n and got married. You had your honeymoon \n in " 
       + honeymoonName + " and lived in a " + homeName 
       + " in \n" + locName + ". You eventually had " 
       + childrenName + " children \n with " + spouseName 
