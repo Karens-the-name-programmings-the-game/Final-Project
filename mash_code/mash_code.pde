@@ -60,7 +60,7 @@ void draw() {
       textAlign(CENTER);
       int swidth = width/2-70;
       int sheight = height/2+180;
-      text("Choose your number!", swidth, sheight);
+      text("Choose your number, \n then press enter!", swidth, sheight);
       fill(255);
       strokeWeight(1);
       rect(swidth+300, sheight-50, 100, 50);
@@ -86,7 +86,7 @@ void draw() {
       textAlign(CENTER);
       int swidth = width/2-70;
       int sheight = height/2+180;
-      text("Choose your number!", swidth, sheight);
+      text("Choose your number, \n then press enter!", swidth, sheight);
       fill(255);
       strokeWeight(1);
       rect(swidth+300, sheight-50, 100, 50);
@@ -115,7 +115,7 @@ void draw() {
     textAlign(CENTER);
     int swidth = width/2-70;
     int sheight = height/2+180;
-    text("Choose your number!", swidth, sheight);
+    text("Choose your number, \n then press enter!", swidth, sheight);
     fill(255);
     strokeWeight(1);
     rect(swidth+300, sheight-50, 100, 50);
@@ -143,7 +143,7 @@ void draw() {
     textAlign(CENTER);
     int swidth = width/2-70;
     int sheight = height/2+180;
-    text("Choose your number!", swidth, sheight);
+    text("Choose your number, \n then press enter!", swidth, sheight);
     fill(255);
     strokeWeight(1);
     rect(swidth+300, sheight-50, 100, 50);
@@ -171,7 +171,7 @@ void draw() {
     textAlign(CENTER);
     int swidth = width/2-70;
     int sheight = height/2+180;
-    text("Choose your number!", swidth, sheight);
+    text("Choose your number, \n then press enter!", swidth, sheight);
     fill(255);
     strokeWeight(1);
     rect(swidth+300, sheight-50, 100, 50);
@@ -199,7 +199,7 @@ void draw() {
     textAlign(CENTER);
     int swidth = width/2-70;
     int sheight = height/2+180;
-    text("Choose your number!", swidth, sheight);
+    text("Choose your number, \n then press enter!", swidth, sheight);
     fill(255);
     strokeWeight(1);
     rect(swidth+300, sheight-50, 100, 50);
@@ -227,7 +227,7 @@ void draw() {
     textAlign(CENTER);
     int swidth = width/2-70;
     int sheight = height/2+180;
-    text("Choose your number!", swidth, sheight);
+    text("Choose your number, \n then press enter!", swidth, sheight);
     fill(255);
     strokeWeight(1);
     rect(swidth+300, sheight-50, 100, 50);
@@ -255,7 +255,7 @@ void draw() {
     textAlign(CENTER);
     int swidth = width/2-70;
     int sheight = height/2+180;
-    text("Choose your number!", swidth, sheight);
+    text("Choose your number, \n then press enter!", swidth, sheight);
     fill(255);
     strokeWeight(1);
     rect(swidth+300, sheight-50, 100, 50);
@@ -283,7 +283,7 @@ void draw() {
     textAlign(CENTER);
     int swidth = width/2-70;
     int sheight = height/2+180;
-    text("Choose your number!", swidth, sheight);
+    text("Choose your number, \n then press enter!", swidth, sheight);
     fill(255);
     strokeWeight(1);
     rect(swidth+300, sheight-50, 100, 50);
