@@ -284,7 +284,7 @@ void draw() {
     text("Car", 460, 200); 
     text("Job", 620, 200); 
     text("Number of Children", 740, 200); 
-    text("Pet", 1100, 200); 
+    text("Pet", 1080, 200); 
     text("Honeymoon", 1200, 200);
     mycategory.getSpouse1();
     mycategory.getLoc1();
@@ -410,11 +410,11 @@ void draw() {
       matched = matched+1;
     }
 
-    if (matched > 4) {
+    if (matched > 1) {
       textSize(100);
       text("You win!", width/2, 200);
     }
-    if (matched <= 4) {
+    if (matched <= 1) {
       textSize(100);
       text("You lose!", width/2, 200);
     }
@@ -425,7 +425,8 @@ void draw() {
       + " in \n" + locName + ". You eventually had " 
       + childrenName + " children \n with " + spouseName 
       + ". You drove around in a \n " + carName 
-      + ". You worked as a " + jobName + "\n for the rest of your life.", width/2, height/2-100);
+      + " and had a pet " + petName + ". \n You worked as a " 
+      + jobName + "\n for the rest of your life.", width/2, height/2-130);
   }
 }
 

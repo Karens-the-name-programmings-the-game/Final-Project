@@ -137,13 +137,13 @@ class category {
   void getPet1() {
     for (int i = 0; i< pet1.size (); i++) {
       textSize(20); 
-      text(pet1.get(i), 1100, 250 + i * 50);
+      text(pet1.get(i), 1080, 250 + i * 50);
     }
   }
 
   void crossPet1(int idx) {
     strokeWeight(5);
-    line(1095, 243 + idx*50, 1190, 243 + idx * 50);
+    line(1075, 243 + idx*50, 1170, 243 + idx * 50);
   }
 
   void getHoneymoon1() {
@@ -168,7 +168,7 @@ class category {
 
   void crossHome(int idx) {
     strokeWeight(5);
-    line(width/2-100+ idx*100, 80, width/2-50+ idx*100, 80);
+    line(width/2-500+ idx*300, 80, width/2-300+ idx*300, 80);
   }
 
 
