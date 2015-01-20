@@ -31,9 +31,9 @@ void draw() {
   //predictions intro screen
   if (screen == 1) {
     background(0);
-    textSize(55);
+    textSize(90);
     fill(255);
-    text("Can you predict your future? Press ENTER to find out!", width/2, height/2);
+    text("Can you predict your future? \n Press ENTER to find out!", width/2, height/2);
     if (keyPressed == true) {
       if (key == ENTER) {
         if (screen <= 2) {
