@@ -445,30 +445,30 @@ void draw() {
     if (mycategory.loc1.get(predictionLoc) == locName) {
       matched = matched+1;
     }
-    if (savedCar == carName) {
+    if (mycategory.car1.get(predictionCar) == carName) {
       matched = matched+1;
     }
-    if (savedJob == jobName) {
+    if (mycategory.job1.get(predictionJob) == jobName) {
       matched = matched+1;
     }
-    if (savedChildren == childrenName) {
+    if (mycategory.children1.get(predictionChildren) == childrenName) {
       matched = matched+1;
     }
-    if (savedPet == petName) {
+    if (mycategory.pet1.get(predictionPet) == petName) {
       matched = matched+1;
     }
-    if (savedHoneymoon == honeymoonName) {
+    if (mycategory.honeymoon1.get(predictionHoneymoon) == honeymoonName) {
       matched = matched+1;
     }
-    if (savedHome == homeName) {
+    if (mycategory.home.get(predictionHome) == homeName) {
       matched = matched+1;
     }
 
-    if (matched >= 1) {
+    if (matched >= 2) {
       textSize(100);
       text("You win!", width/2, 200);
     }
-    if (matched < 1) {
+    if (matched < 2) {
       textSize(100);
       text("You lose!", width/2, 200);
     }
