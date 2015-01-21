@@ -15,16 +15,18 @@ String item = "";
 String spouseName, locName, carName, jobName, childrenName, petName, honeymoonName, homeName;
 int n, p, sn, matched;
 int predictionSpouse, predictionLoc, predictionCar, predictionJob, predictionChildren, predictionPet, predictionHoneymoon, predictionHome;
+PImage background1, background2;
 
 void setup() {
   size(displayWidth, displayHeight);
   screen = 0;
   gender = 0;
   p = 0;
+  background1 = loadImage("background1.jpg");
+  background2 = loadImage("background2.jpg");
 }
 
 void draw() {
-  println("savedSpouse: " + savedSpouse + ", spouseName: " + spouseName);
   category mycategory = new category();
 
   //intro screen
@@ -33,9 +35,13 @@ void draw() {
   //predictions intro screen
   if (screen == 1) {
     background(0);
+    image(background2, 0, 0, width, height);
     textSize(90);
+//    fill(43, 194, 255, 170);
+//    rect(
     fill(255);
-    text("Can you predict your future? \n Press ENTER to find out!", width/2, height/2);
+    text("Can you predict your future?", width/2, 200);
+    text("Press ENTER to find out!", width/2, height-200);
     if (keyPressed == true) {
       if (key == ENTER) {
         if (screen <= 2) {
@@ -490,6 +496,7 @@ int firstScreen() {
   if (screen == 0) {
     frameRate(10);
     background(0);
+    image(background1, 0, 0, width, height);
 
     //title Welcome to MASH!
     fill(255);
@@ -503,9 +510,10 @@ int firstScreen() {
     //pick your gender: 
 
     //male button
+    fill(57, 194, 255, 170);
+//    noStroke();
+    rect(width/2-340, height/2+120, 200, 85, 7);
     fill(255);
-    rect(width/2-340, height/2+120, 200, 85);
-    fill(0);
     textSize(50);
     text("male", width/2-240, height/2+182);
 
@@ -517,9 +525,10 @@ int firstScreen() {
     }
 
     //female button
+    fill(57, 194, 255, 170);
+//    noStroke();
+    rect(width/2+140, height/2+120, 200, 85, 7);
     fill(255);
-    rect(width/2+140, height/2+120, 200, 85);
-    fill(0);
     textAlign(CENTER);
     textSize(50);
     text("female", width/2+240, height/2+182);
