@@ -11,35 +11,35 @@ class category {
 
   //class constructor
   category() {
-    spousem1.append("Miley Cyrus");
-    spousem1.append("Taylor Swift");
-    spousem1.append("Oprah Winfrey");
-    spousem1.append("Betty White");
-    spousem1.append("Jennifer Lawrence");
+    spousem1.append("Ginny Weasley");
+    spousem1.append("Lavender Brown");
+    spousem1.append("Cho Chang");
+    spousem1.append("Fleur Delacour");
+    spousem1.append("Petunia Dursley");
 
-    spousef1.append("Leonardo DiCaprio");
-    spousef1.append("Marilyn Manson");
-    spousef1.append("Barack Obama");
-    spousef1.append("Kanye West");
-    spousef1.append("Kim Jong Un");
+    spousef1.append("Harry Potter");
+    spousef1.append("Lord Voldemort");
+    spousef1.append("Ron Weasley");
+    spousef1.append("Neville Longbottom");
+    spousef1.append("Draco Malfoy");
 
-    loc1.append("North Korea");
-    loc1.append("Pluto");
-    loc1.append("Poland");
-    loc1.append("A Janitor's Closet");
-    loc1.append("International Space Station");
+    loc1.append("The Burrow");
+    loc1.append("Malfoy Manor");
+    loc1.append("Hogwarts");
+    loc1.append("Gringotts");
+    loc1.append("Knockturn Alley");
 
-    car1.append("Station Wagon");
-    car1.append("Unicycle");
-    car1.append("Lamborghini");
-    car1.append("Mercedes-Benz");
-    car1.append("Honda Odyssey");
+    car1.append("Nimbus 2000");
+    car1.append("The Flying Ford Anglia");
+    car1.append("Firebolt");
+    car1.append("Cleansweep 7");
+    car1.append("Thestral");
 
-    job1.append("Teacher at Magnet High School");
-    job1.append("Lumberjack");
-    job1.append("President of the United States");
-    job1.append("Grave Digger");
-    job1.append("TSA Officer");
+    job1.append("Teacher at Hogwarts");
+    job1.append("Death Eater");
+    job1.append("Minister of Magic");
+    job1.append("Dragon Trainer");
+    job1.append("Professional Quidditch Player");
 
     children1.append("0");
     children1.append("69");
@@ -47,17 +47,17 @@ class category {
     children1.append("1000");
     children1.append("-20");
 
-    pet1.append("Baby chimpanzee");
-    pet1.append("Baboon");
-    pet1.append("Cockroach");
-    pet1.append("Piranha");
-    pet1.append("Baby tiger");
+    pet1.append("Blast-Ended Skrewt");
+    pet1.append("Hungarian Horntail");
+    pet1.append("Unicorn");
+    pet1.append("Owl");
+    pet1.append("Acromantula");
 
-    honeymoon1.append("Nowhere");
-    honeymoon1.append("My Backyard");
-    honeymoon1.append("Bermuda Triangle");
-    honeymoon1.append("Saudi Arabia");
-    honeymoon1.append("Venice");
+    honeymoon1.append("Durmstrang");
+    honeymoon1.append("Beauxbatons");
+    honeymoon1.append("Shell Cottage");
+    honeymoon1.append("4 Privet Drive");
+    honeymoon1.append("Godric's Hollow");
 
     home.append("Mansion");
     home.append("Apartment");
