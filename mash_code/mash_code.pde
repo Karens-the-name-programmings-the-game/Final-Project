@@ -16,16 +16,16 @@ String spouseName, locName, carName, jobName, childrenName, petName, honeymoonNa
 int n, p, sn, matched, theta;
 int predictionSpouse, predictionLoc, predictionCar, predictionJob, predictionChildren, predictionPet, predictionHoneymoon, predictionHome;
 PVector loc, v;
-PImage background0, background1, background2, background3, background4, background5, background6, background7, background8, background9, background10, background11, background12;
+PImage background0, background1, background2, background3, background4, background5, background6, background7, background8, background9, background10, background11, background12, background13;
 
 void setup() {
   size(displayWidth, displayHeight);
   screen = 0;
   gender = 0;
   p = 0;
-  v= new PVector.random2D ();
-  loc= new PVector (-100);
-  theta = random( 0, TWO_PI);
+//  v= new PVector.random2D();
+ // loc= new PVector(-100);
+ // theta = random( 0, TWO_PI);
   background0 = loadImage("background0.jpg");
   background1 = loadImage("background1.jpg");
   background2 = loadImage("background2.jpg");
@@ -39,6 +39,7 @@ void setup() {
   background10 = loadImage("background10.jpg");
   background11 = loadImage("background11.jpg");
   background12 = loadImage("background12.png");
+  background13 = loadImage("background13.jpg");
 }
 
 void draw() {
@@ -497,6 +498,7 @@ void draw() {
 
     if (matched >= 2) {
       background(0);
+      image(background12, 0,0, width, height);
       pushMatrix();
       translate(loc.x, loc.y);                                             
       rotate(theta);
@@ -509,7 +511,7 @@ void draw() {
     }
     if (matched < 2) {
       background(0);
-      image(background12, width/2-100,height/2-100, width/2, height/2);
+      image(background13, 0, 0, width, height);
       textSize(100);
       text("You lose!", width/2, 200);
     }
