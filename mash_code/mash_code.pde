@@ -187,12 +187,12 @@ void draw() {
     int swidth = width/2-70;
     int sheight = height/2+180;
     text("Choose your number, \n then press enter!", swidth, sheight);
-    fill(255);
+    fill(30, 24, 255, 120);
     strokeWeight(1);
-    rect(swidth+300, sheight-50, 100, 50);
-    fill(0);
+    rect(swidth+270, sheight+20, 100, 50);
+    fill(255);
     textSize(40);
-    text(typing, swidth+350, sheight-10);
+    text(typing, swidth+270, sheight+35);
     savedCar = typing;
     if (keyPressed) {
       if (key == BACKSPACE) {
