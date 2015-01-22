@@ -173,6 +173,9 @@ void draw() {
   if (screen == 4) {
     background(0);
     image(background4, 0, 0, width, height);
+    fill(30, 24, 255, 100);
+    rect(width/2, height/2-30, 600, 700);
+    fill(255);
     text("TYPE OF CAR", width/2, 150);
     strokeWeight(5);
     line(width/2-150, 160, width/2+150, 160);
