@@ -56,7 +56,7 @@ class category {
     honeymoon1.append("Durmstrang");
     honeymoon1.append("Beauxbatons");
     honeymoon1.append("Shell Cottage");
-    honeymoon1.append("Diagon Alley");
+    honeymoon1.append("4 Privet Drive");
     honeymoon1.append("Godric's Hollow");
 
     home.append("Mansion");
