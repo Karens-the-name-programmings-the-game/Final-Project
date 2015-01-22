@@ -13,7 +13,8 @@ String savedHome = new String();
 String savedNumber = new String();
 String item = "";
 String spouseName, locName, carName, jobName, childrenName, petName, honeymoonName, homeName;
-int n, p, sn, matched, theta;
+int n, p, sn, matched;
+float theta;
 int predictionSpouse, predictionLoc, predictionCar, predictionJob, predictionChildren, predictionPet, predictionHoneymoon, predictionHome;
 PVector loc, v;
 PImage background0, background1, background2, background3, background4, background5, background6, background7, background8, background9, background10, background11, background12, background13;
@@ -23,9 +24,9 @@ void setup() {
   screen = 0;
   gender = 0;
   p = 0;
-//  v= new PVector.random2D();
- // loc= new PVector(-100);
- // theta = random( 0, TWO_PI);
+  v=PVector.random2D();
+ loc= new PVector(-50,-100);
+ theta = random( 0, TWO_PI);
   background0 = loadImage("background0.jpg");
   background1 = loadImage("background1.jpg");
   background2 = loadImage("background2.jpg");
@@ -38,7 +39,7 @@ void setup() {
   background9 = loadImage("background9.jpg");
   background10 = loadImage("background10.jpg");
   background11 = loadImage("background11.jpg");
-  background12 = loadImage("background12.png");
+  background12 = loadImage("background12.jpg");
   background13 = loadImage("background13.jpg");
 }
 
