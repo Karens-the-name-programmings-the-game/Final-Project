@@ -13,17 +13,32 @@ String savedHome = new String();
 String savedNumber = new String();
 String item = "";
 String spouseName, locName, carName, jobName, childrenName, petName, honeymoonName, homeName;
-int n, p, sn, matched;
+int n, p, sn, matched, theta;
 int predictionSpouse, predictionLoc, predictionCar, predictionJob, predictionChildren, predictionPet, predictionHoneymoon, predictionHome;
-PImage background1, background2;
+PVector loc, v;
+PImage background0, background1, background2, background3, background4, background5, background6, background7, background8, background9, background10, background11, background12;
 
 void setup() {
   size(displayWidth, displayHeight);
   screen = 0;
   gender = 0;
   p = 0;
+  v= new PVector.random2D ();
+  loc= new PVector (-100);
+  theta = random( 0, TWO_PI);
+  background0 = loadImage("background0.jpg");
   background1 = loadImage("background1.jpg");
   background2 = loadImage("background2.jpg");
+  background3 = loadImage("background3.jpg");
+  background4 = loadImage("background4.jpg");
+  background5 = loadImage("background5.jpg");
+  background6 = loadImage("background6.jpg");
+  background7 = loadImage("background7.jpg");
+  background8 = loadImage("background8.jpg");
+  background9 = loadImage("background9.jpg");
+  background10 = loadImage("background10.jpg");
+  background11 = loadImage("background11.jpg");
+  background12 = loadImage("background12.png");
 }
 
 void draw() {
@@ -35,10 +50,10 @@ void draw() {
   //predictions intro screen
   if (screen == 1) {
     background(0);
-    image(background2, 0, 0, width, height);
+    image(background1, 0, 0, width, height);
     textSize(90);
-//    fill(43, 194, 255, 170);
-//    rect(
+    //    fill(43, 194, 255, 170);
+    //    rect(
     fill(255);
     text("Can you predict your future?", width/2, 200);
     text("Press ENTER to find out!", width/2, height-200);
@@ -55,8 +70,8 @@ void draw() {
 
   //spouse
   if (screen == 2) {
-    background(255);
-
+    background(0);
+    image(background2, 0, 0, width, height);
     if (gender == 1) {
       text("SPOUSE", width/2, 150);
       strokeWeight(5);
@@ -84,6 +99,8 @@ void draw() {
     }
 
     if (gender == 2) {
+      background(0);
+      image(background2, 0, 0, width, height);
       text("SPOUSE", width/2, 150);
       strokeWeight(5);
       line(width/2-100, 160, width/2+100, 160);
@@ -112,7 +129,8 @@ void draw() {
 
   //location of residence
   if (screen == 3) {
-    background(255);
+    background(0);
+    image(background3, 0, 0, width, height);
     text("PLACE", width/2, 150);
     strokeWeight(5);
     line(width/2-100, 160, width/2+100, 160);
@@ -140,7 +158,8 @@ void draw() {
 
   //type of car
   if (screen == 4) {
-    background(255);
+    background(0);
+    image(background4, 0, 0, width, height);
     text("TYPE OF CAR", width/2, 150);
     strokeWeight(5);
     line(width/2-150, 160, width/2+150, 160);
@@ -168,7 +187,8 @@ void draw() {
 
   //job
   if (screen == 5) {
-    background(255);
+    background(0);
+    image(background5, 0, 0, width, height);
     text("JOB", width/2, 150);
     strokeWeight(5);
     line(width/2-70, 160, width/2+70, 160);
@@ -197,6 +217,7 @@ void draw() {
   //number of children
   if (screen == 6) {
     background(255);
+    image(background6, 0, 0, width, 100);
     text("NUMBER OF CHILDREN", width/2, 150);
     strokeWeight(5);
     line(width/2-250, 160, width/2+250, 160);
@@ -224,7 +245,8 @@ void draw() {
 
   //type of pet
   if (screen == 7) {
-    background(255);
+    background(0);
+    image(background7, 0, 0, width, height);
     text("PET", width/2, 150);
     strokeWeight(5);
     line(width/2-70, 160, width/2+70, 160);
@@ -252,7 +274,8 @@ void draw() {
 
   //honeymoon location
   if (screen == 8) {
-    background(255);
+    background(0);
+    image(background8, 0, 0, width, height);
     text("HONEYMOON LOCATION", width/2, 150);
     strokeWeight(5);
     line(width/2-250, 160, width/2+250, 160);
@@ -280,7 +303,8 @@ void draw() {
 
   //home
   if (screen ==9) {
-    background(255);
+    background(0);
+    image(background9, 0, 0, width, height);
     text("TYPE OF HOME", width/2, 150);
     strokeWeight(5);
     line(width/2-150, 160, width/2+150, 160);
@@ -308,7 +332,8 @@ void draw() {
 
   //pick a number
   if (screen == 10) {
-    background(255);
+    background(0);
+    image(background10, 0, 0, width, height);
     fill(0);
     text("Pick a number between 1 and 15!", width/2, height/2-100);
     fill(255);
@@ -432,7 +457,7 @@ void draw() {
 
   if (screen == 12) {
     background(255);
-    
+
     //change saved strings into integers
     predictionSpouse = Integer.parseInt(savedSpouse);
     predictionLoc = Integer.parseInt(savedLoc);
@@ -471,10 +496,20 @@ void draw() {
     }
 
     if (matched >= 2) {
+      background(0);
+      pushMatrix();
+      translate(loc.x, loc.y);                                             
+      rotate(theta);
+      fill(random(255), random(255), random(255));
+      rect(loc.x, loc.y, 10, 10);
+      popMatrix();
+      loc.add(v);
       textSize(100);
       text("You win!", width/2, 200);
     }
     if (matched < 2) {
+      background(0);
+      image(background12, width/2-100,height/2-100, width/2, height/2);
       textSize(100);
       text("You lose!", width/2, 200);
     }
@@ -496,7 +531,7 @@ int firstScreen() {
   if (screen == 0) {
     frameRate(10);
     background(0);
-    image(background1, 0, 0, width, height);
+    image(background0, 0, 0, width, height);
 
     //title Welcome to MASH!
     fill(255);
@@ -511,7 +546,7 @@ int firstScreen() {
 
     //male button
     fill(57, 194, 255, 170);
-//    noStroke();
+    //    noStroke();
     rect(width/2-340, height/2+120, 200, 85, 7);
     fill(255);
     textSize(50);
@@ -526,7 +561,7 @@ int firstScreen() {
 
     //female button
     fill(57, 194, 255, 170);
-//    noStroke();
+    //    noStroke();
     rect(width/2+140, height/2+120, 200, 85, 7);
     fill(255);
     textAlign(CENTER);
