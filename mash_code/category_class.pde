@@ -12,12 +12,12 @@ class category {
   //class constructor
   category() {
     spousem1.append("Miley Cyrus");
-    spousem1.append("Whoopi Goldberg");
+    spousem1.append("Taylor Swift");
     spousem1.append("Oprah Winfrey");
     spousem1.append("Betty White");
-    spousem1.append("Kristen Stewart");
+    spousem1.append("Jennifer Lawrence");
 
-    spousef1.append("Justin Bieber");
+    spousef1.append("Leonardo DiCaprio");
     spousef1.append("Marilyn Manson");
     spousef1.append("Barack Obama");
     spousef1.append("Kanye West");
@@ -25,19 +25,19 @@ class category {
 
     loc1.append("North Korea");
     loc1.append("Pluto");
-    loc1.append("South Dakota");
+    loc1.append("Poland");
     loc1.append("A Janitor's Closet");
-    loc1.append("Walden Pond");
+    loc1.append("International Space Station");
 
     car1.append("Station Wagon");
     car1.append("Unicycle");
-    car1.append("Toyota Corolla");
-    car1.append("Toyota Prius");
+    car1.append("Lamborghini");
+    car1.append("Mercedes-Benz");
     car1.append("Honda Odyssey");
 
-    job1.append("McDonald's Worker");
+    job1.append("Teacher at Magnet High School");
     job1.append("Lumberjack");
-    job1.append("Garbage Collector");
+    job1.append("President of the United States");
     job1.append("Grave Digger");
     job1.append("TSA Officer");
 
@@ -47,17 +47,17 @@ class category {
     children1.append("1000");
     children1.append("-20");
 
-    pet1.append("Alligator");
+    pet1.append("Baby chimpanzee");
     pet1.append("Baboon");
     pet1.append("Cockroach");
     pet1.append("Piranha");
-    pet1.append("Baby Tiger");
+    pet1.append("Baby tiger");
 
     honeymoon1.append("Nowhere");
-    honeymoon1.append("Your Backyard");
+    honeymoon1.append("My Backyard");
     honeymoon1.append("Bermuda Triangle");
     honeymoon1.append("Saudi Arabia");
-    honeymoon1.append("Syria");
+    honeymoon1.append("Venice");
 
     home.append("Mansion");
     home.append("Apartment");
