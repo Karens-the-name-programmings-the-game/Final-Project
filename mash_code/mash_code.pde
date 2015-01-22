@@ -23,9 +23,9 @@ void setup() {
   screen = 0;
   gender = 0;
   p = 0;
-  v= new PVector.random2D ();
-  loc= new PVector (-100);
-  theta = random( 0, TWO_PI);
+//  v= new PVector.random2D ();
+//  loc= new PVector (-100);
+//  theta = random( 0, TWO_PI);
   background0 = loadImage("background0.jpg");
   background1 = loadImage("background1.jpg");
   background2 = loadImage("background2.jpg");
@@ -42,6 +42,8 @@ void setup() {
 }
 
 void draw() {
+  noStroke();
+  
   category mycategory = new category();
 
   //intro screen
@@ -52,8 +54,10 @@ void draw() {
     background(0);
     image(background1, 0, 0, width, height);
     textSize(90);
-    //    fill(43, 194, 255, 170);
-    //    rect(
+    fill(30, 24, 255, 80);
+    rectMode(CENTER);
+    rect(width/2, 170, width, 150);
+    rect(width/2, height-230, width, 150);
     fill(255);
     text("Can you predict your future?", width/2, 200);
     text("Press ENTER to find out!", width/2, height-200);
@@ -73,6 +77,9 @@ void draw() {
     background(0);
     image(background2, 0, 0, width, height);
     if (gender == 1) {
+      fill(30, 24, 255, 80);
+      rect(width/2, height/2-30, 600, 700);
+      fill(255);
       text("SPOUSE", width/2, 150);
       strokeWeight(5);
       line(width/2-100, 160, width/2+100, 160);
@@ -84,12 +91,12 @@ void draw() {
       int swidth = width/2-70;
       int sheight = height/2+180;
       text("Choose your number, \n then press enter!", swidth, sheight);
-      fill(255);
+      fill(30, 24, 255, 120);
       strokeWeight(1);
-      rect(swidth+300, sheight-50, 100, 50);
-      fill(0);
+      rect(swidth+300, sheight+20, 100, 50);
+      fill(255);
       textSize(40);
-      text(typing, swidth+350, sheight-10);
+      text(typing, swidth+300, sheight+35);
       savedSpouse = typing;
       if (keyPressed) {
         if (key == BACKSPACE) {
@@ -217,7 +224,7 @@ void draw() {
   //number of children
   if (screen == 6) {
     background(255);
-    image(background6, 0, 0, width, 100);
+    image(background6, 0, 0, width, height);
     text("NUMBER OF CHILDREN", width/2, 150);
     strokeWeight(5);
     line(width/2-250, 160, width/2+250, 160);
@@ -352,6 +359,7 @@ void draw() {
   //MASH!
   if (screen == 11) {
     background(255);
+    image(background11, 0, 0, width, height);
     textAlign(LEFT);
     textSize(32); 
     text("Spouse", 60, 200); 
