@@ -11,35 +11,36 @@ class category {
 
   //class constructor
   category() {
-    spousem1.append("Ginny Weasley");
-    spousem1.append("Lavender Brown");
-    spousem1.append("Cho Chang");
-    spousem1.append("Fleur Delacour");
-    spousem1.append("Petunia Dursley");
 
-    spousef1.append("Harry Potter");
-    spousef1.append("Lord Voldemort");
-    spousef1.append("Ron Weasley");
-    spousef1.append("Neville Longbottom");
-    spousef1.append("Draco Malfoy");
+    spousem1.append("Miley Cyrus");
+    spousem1.append("Whoopi Goldberg");
+    spousem1.append("Oprah Winfrey");
+    spousem1.append("Betty White");
+    spousem1.append("Kristen Stewart");
 
-    loc1.append("The Burrow");
-    loc1.append("Malfoy Manor");
-    loc1.append("Hogwarts");
-    loc1.append("Gringotts");
-    loc1.append("Knockturn Alley");
+    spousef1.append("Justin Bieber");
+    spousef1.append("Marilyn Manson");
+    spousef1.append("Barack Obama");
+    spousef1.append("Kanye West");
+    spousef1.append("Kim Jong Un");
 
-    car1.append("Nimbus 2000");
-    car1.append("The Flying Ford Anglia");
-    car1.append("Firebolt");
-    car1.append("Cleansweep 7");
-    car1.append("Thestral");
+    loc1.append("North Korea");
+    loc1.append("Pluto");
+    loc1.append("South Dakota");
+    loc1.append("A Janitor's Closet");
+    loc1.append("Walden Pond");
 
-    job1.append("Teacher at Hogwarts");
-    job1.append("Death Eater");
-    job1.append("Minister of Magic");
-    job1.append("Dragon Trainer");
-    job1.append("Professional Quidditch Player");
+    car1.append("Station Wagon");
+    car1.append("Unicycle");
+    car1.append("Toyota Corolla");
+    car1.append("Toyota Prius");
+    car1.append("Honda Odyssey");
+
+    job1.append("McDonald's Worker");
+    job1.append("Lumberjack");
+    job1.append("Garbage Collector");
+    job1.append("Grave Digger");
+    job1.append("TSA Officer");
 
     children1.append("0");
     children1.append("69");
@@ -47,17 +48,17 @@ class category {
     children1.append("1000");
     children1.append("-20");
 
-    pet1.append("Blast-Ended Skrewt");
-    pet1.append("Hungarian Horntail");
-    pet1.append("Unicorn");
-    pet1.append("Owl");
-    pet1.append("Acromantula");
+    pet1.append("Alligator");
+    pet1.append("Baboon");
+    pet1.append("Cockroach");
+    pet1.append("Piranha");
+    pet1.append("Baby Tiger");
 
-    honeymoon1.append("Durmstrang");
-    honeymoon1.append("Beauxbatons");
-    honeymoon1.append("Shell Cottage");
-    honeymoon1.append("4 Privet Drive");
-    honeymoon1.append("Godric's Hollow");
+    honeymoon1.append("Nowhere");
+    honeymoon1.append("Your Backyard");
+    honeymoon1.append("Bermuda Triangle");
+    honeymoon1.append("Saudi Arabia");
+    honeymoon1.append("Syria");
 
     home.append("Mansion");
     home.append("Apartment");
@@ -82,6 +83,7 @@ class category {
   }
 
   void crossSpouse1(int idx) {
+    stroke(0);
     strokeWeight(5);
     line(55, 243 + idx*50, 220, 243 + idx * 50);
   }
