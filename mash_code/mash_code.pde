@@ -112,6 +112,7 @@ void draw() {
     }
 
     if (gender == 2) {
+      textSize(40);
       background(0);
       image(background2, 0, 0, width, height);
       fill(30, 24, 255, 80);
@@ -132,7 +133,6 @@ void draw() {
       strokeWeight(1);
       rect(swidth+300, sheight+20, 100, 50);
       fill(255);
-      textSize(40);
       text(typing, swidth+300, sheight+35);
       savedSpouse = typing;
       if (keyPressed) {
@@ -211,6 +211,9 @@ void draw() {
   if (screen == 5) {
     background(0);
     image(background5, 0, 0, width, height);
+    fill(30, 24, 255, 100);
+    rect(width/2, height/2-30, 600, 700);
+    fill(255);
     text("JOB", width/2, 150);
     strokeWeight(5);
     line(width/2-70, 160, width/2+70, 160);
@@ -222,12 +225,12 @@ void draw() {
     int swidth = width/2-70;
     int sheight = height/2+180;
     text("Choose your number, \n then press enter!", swidth, sheight);
-    fill(255);
+    fill(30, 24, 255, 120);
     strokeWeight(1);
-    rect(swidth+300, sheight-50, 100, 50);
-    fill(0);
+    rect(swidth+270, sheight+25, 100, 50);
+    fill(255);
     textSize(40);
-    text(typing, swidth+350, sheight-10);
+    text(typing, swidth+270, sheight+40);
     savedJob = typing;
     if (keyPressed) {
       if (key == BACKSPACE) {
@@ -240,6 +243,9 @@ void draw() {
   if (screen == 6) {
     background(255);
     image(background6, 0, 0, width, height);
+    fill(30, 24, 255, 100);
+    rect(width/2, height/2-30, 600, 700);
+    fill(255);
     text("NUMBER OF CHILDREN", width/2, 150);
     strokeWeight(5);
     line(width/2-250, 160, width/2+250, 160);
@@ -251,12 +257,12 @@ void draw() {
     int swidth = width/2-70;
     int sheight = height/2+180;
     text("Choose your number, \n then press enter!", swidth, sheight);
-    fill(255);
+    fill(30, 24, 255, 120);
     strokeWeight(1);
-    rect(swidth+300, sheight-50, 100, 50);
-    fill(0);
+    rect(swidth+280, sheight+25, 100, 50);
+    fill(255);
     textSize(40);
-    text(typing, swidth+350, sheight-10);
+    text(typing, swidth+280, sheight+40);
     savedChildren = typing;
     if (keyPressed) {
       if (key == BACKSPACE) {
@@ -269,6 +275,9 @@ void draw() {
   if (screen == 7) {
     background(0);
     image(background7, 0, 0, width, height);
+    fill(30, 24, 255, 100);
+    rect(width/2, height/2-30, 600, 700);
+    fill(255);
     text("PET", width/2, 150);
     strokeWeight(5);
     line(width/2-70, 160, width/2+70, 160);
@@ -280,12 +289,12 @@ void draw() {
     int swidth = width/2-70;
     int sheight = height/2+180;
     text("Choose your number, \n then press enter!", swidth, sheight);
-    fill(255);
+    fill(30, 24, 255, 120);
     strokeWeight(1);
-    rect(swidth+300, sheight-50, 100, 50);
-    fill(0);
+    rect(swidth+280, sheight+25, 100, 50);
+    fill(255);
     textSize(40);
-    text(typing, swidth+350, sheight-10);
+    text(typing, swidth+280, sheight+40);
     savedPet = typing;
     if (keyPressed) {
       if (key == BACKSPACE) {
@@ -298,6 +307,9 @@ void draw() {
   if (screen == 8) {
     background(0);
     image(background8, 0, 0, width, height);
+    fill(30, 24, 255, 100);
+    rect(width/2, height/2-30, 600, 700);
+    fill(255);
     text("HONEYMOON LOCATION", width/2, 150);
     strokeWeight(5);
     line(width/2-250, 160, width/2+250, 160);
@@ -309,12 +321,12 @@ void draw() {
     int swidth = width/2-70;
     int sheight = height/2+180;
     text("Choose your number, \n then press enter!", swidth, sheight);
-    fill(255);
+    fill(30, 24, 255, 120);
     strokeWeight(1);
-    rect(swidth+300, sheight-50, 100, 50);
-    fill(0);
+    rect(swidth+280, sheight+20, 100, 50);
+    fill(255);
     textSize(40);
-    text(typing, swidth+350, sheight-10);
+    text(typing, swidth+280, sheight+35);
     savedHoneymoon = typing;
     if (keyPressed) {
       if (key == BACKSPACE) {
@@ -327,6 +339,9 @@ void draw() {
   if (screen ==9) {
     background(0);
     image(background9, 0, 0, width, height);
+    fill(30, 24, 255, 70);
+    rect(width/2, height/2-30, 600, 700);
+    fill(255);
     text("TYPE OF HOME", width/2, 150);
     strokeWeight(5);
     line(width/2-150, 160, width/2+150, 160);
@@ -338,12 +353,12 @@ void draw() {
     int swidth = width/2-70;
     int sheight = height/2+180;
     text("Choose your number, \n then press enter!", swidth, sheight);
-    fill(255);
+    fill(30, 24, 255, 120);
     strokeWeight(1);
-    rect(swidth+300, sheight-50, 100, 50);
-    fill(0);
+    rect(swidth+280, sheight+20, 100, 50);
+    fill(255);
     textSize(40);
-    text(typing, swidth+350, sheight-10);
+    text(typing, swidth+280, sheight+35);
     savedHome = typing;
     if (keyPressed) {
       if (key == BACKSPACE) {
