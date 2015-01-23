@@ -39,12 +39,8 @@ void setup() {
   background9 = loadImage("background9.jpg");
   background10 = loadImage("background10.jpg");
   background11 = loadImage("background11.jpg");
-<<<<<<< HEAD
   background12 = loadImage("background12.jpg");
-  background13 = loadImage("background13.jpg");
-=======
-  background12 = loadImage("background12.png");
->>>>>>> origin/master
+//  background13 = loadImage("background13.jpg");
 }
 
 void draw() {
@@ -371,13 +367,15 @@ void draw() {
   if (screen == 10) {
     background(0);
     image(background10, 0, 0, width, height);
-    fill(0);
-    text("Pick a number between 1 and 15!", width/2, height/2-100);
+    fill(30, 24, 255, 100);
+    rect(width/2, height/2-30, 900, 300);
     fill(255);
+    text("Pick a number between 1 and 15!", width/2, height/2-100);
+    fill(30, 24, 255, 120);
     rect(width/2-50, height/2, 100, 50);
-    fill(0);
+    fill(255);
     textSize(40);
-    text(typing, width/2, height/2+40);
+    text(typing, width/2-50, height/2+15);
     savedNumber = typing;
     if (keyPressed) {
       if (key == BACKSPACE) {
