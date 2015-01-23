@@ -17,7 +17,7 @@ int n, p, sn, matched;
 float theta;
 int predictionSpouse, predictionLoc, predictionCar, predictionJob, predictionChildren, predictionPet, predictionHoneymoon, predictionHome;
 PVector loc, v;
-PImage background0, background1, background2, background3, background4, background5, background6, background7, background8, background9, background10, background11, background12;
+PImage background0, background1, background2, background3, background4, background5, background6, background7, background8, background9, background10, background11, background12, background13;
 
 void setup() {
   size(displayWidth, displayHeight);
@@ -40,7 +40,7 @@ void setup() {
   background10 = loadImage("background10.jpg");
   background11 = loadImage("background11.jpg");
   background12 = loadImage("background12.jpg");
-//  background13 = loadImage("background13.jpg");
+  background13 = loadImage("background13.jpg");
 }
 
 void draw() {
@@ -390,13 +390,13 @@ void draw() {
     image(background11, 0, 0, width, height);
     textAlign(LEFT);
     textSize(32); 
-    text("Spouse", 60, 200); 
-    text("Place", 270, 200); 
-    text("Car", 460, 200); 
-    text("Job", 620, 200); 
-    text("Number of Children", 740, 200); 
+    text("Spouse", 20, 200); 
+    text("Place", 220, 200); 
+    text("Car", 400, 200); 
+    text("Job", 600, 200); 
+    text("Number of Children", 720, 200); 
     text("Pet", 1080, 200); 
-    text("Honeymoon", 1200, 200);
+    text("Honeymoon", 1240, 200);
     mycategory.getSpouse1();
     mycategory.getLoc1();
     mycategory.getCar1();
@@ -533,6 +533,7 @@ void draw() {
 
     if (matched >= 2) {
       background(0);
+      image(background12, 0, 0, width, height);
       pushMatrix();
       translate(loc.x, loc.y);                                             
       rotate(theta);
@@ -545,7 +546,7 @@ void draw() {
     }
     if (matched < 2) {
       background(0);
-      image(background12, width/2-100, height/2-100, width/2, height/2);
+      image(background13, 0, 0, width, height);
       textSize(100);
       text("You lose!", width/2, 200);
     }
