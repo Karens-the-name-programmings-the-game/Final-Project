@@ -14,7 +14,6 @@ String savedNumber = new String();
 String item = "";
 String spouseName, locName, carName, jobName, childrenName, petName, honeymoonName, homeName;
 int n, p, sn, matched;
-//float theta;
 int predictionSpouse, predictionLoc, predictionCar, predictionJob, predictionChildren, predictionPet, predictionHoneymoon, predictionHome;
 PImage background0, background1, background2, background3, background4, background5, background6, background7, background8, background9, background10, background11, background12, background13;
 int count = 500;
@@ -29,9 +28,8 @@ void setup() {
   screen = 0;
   gender = 0;
   p = 0;
-  //  v= new PVector(random(0, -2), random(0, 5));
-  //  loc= new PVector (random(0, width), -100);
-  //  theta = random(TWO_PI);
+  
+  //initialize confetti
   for (int i = 0; i<count; i++) {
     rx[i] = random(2, 5);
     ry[i] = random(5, 10);
@@ -39,6 +37,8 @@ void setup() {
     v[i] = new PVector(random(-3,3), random(5));
     a[i] = new PVector(0.1, 0.1);
   }
+  
+  //initialize backgrounds
   background0 = loadImage("background0.jpg");
   background1 = loadImage("background1.jpg");
   background2 = loadImage("background2.jpg");
@@ -90,6 +90,8 @@ void draw() {
   if (screen == 2) {
     background(0);
     image(background2, 0, 0, width, height);
+    
+    //male
     if (gender == 1) {
       textSize(40);
       fill(30, 24, 255, 80);
@@ -118,7 +120,8 @@ void draw() {
         }
       }
     }
-
+    
+    //female
     if (gender == 2) {
       textSize(40);
       background(0);
@@ -400,6 +403,8 @@ void draw() {
   if (screen == 11) {
     background(255);
     image(background11, 0, 0, width, height);
+    
+    //display category titles
     textAlign(LEFT);
     textSize(32); 
     text("Spouse", 20, 200); 
@@ -543,7 +548,7 @@ void draw() {
       matched = matched+1;
     }
 
-    if (matched >= 1) {
+    if (matched >= 2) {
       background(0);
       image(background12, 0, 0, width, height);
       
@@ -567,7 +572,7 @@ void draw() {
       fill(255);
       text("You win!", width/2, 200);
     }
-    if (matched < 1) {
+    if (matched < 2) {
       background(0);
       image(background13, 0, 0, width, height);
       fill(30, 24, 255, 60);
@@ -637,6 +642,7 @@ int firstScreen() {
     textSize(50);
     text("male", width/2-240, height/2+182);
 
+    //move on to next screen
     if (mousePressed) {
       if (mouseX > width/2-340 && mouseX < width/2-140 && mouseY > height/2+120 && mouseY < height/2+205) {
         gender = 1;
@@ -652,7 +658,8 @@ int firstScreen() {
     textAlign(CENTER);
     textSize(50);
     text("female", width/2+240, height/2+182);
-
+    
+    //move on to next screen
     if (mousePressed) {
       if (mouseX > width/2+140 && mouseX < width/2+340 && mouseY > height/2+120 && mouseY < height/2+205) {
         gender = 2;
