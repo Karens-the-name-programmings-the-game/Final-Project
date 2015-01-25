@@ -14,19 +14,31 @@ String savedNumber = new String();
 String item = "";
 String spouseName, locName, carName, jobName, childrenName, petName, honeymoonName, homeName;
 int n, p, sn, matched;
-float theta;
+//float theta;
 int predictionSpouse, predictionLoc, predictionCar, predictionJob, predictionChildren, predictionPet, predictionHoneymoon, predictionHome;
-PVector loc, v;
 PImage background0, background1, background2, background3, background4, background5, background6, background7, background8, background9, background10, background11, background12, background13;
+int count = 500;
+PVector[] loc = new PVector[count];
+PVector[] v = new PVector[count];
+PVector[] a = new PVector[count];
+float[] rx = new float[count];
+float[] ry = new float[count];
 
 void setup() {
   size(displayWidth, displayHeight);
   screen = 0;
   gender = 0;
   p = 0;
-  //  v= new PVector.random2D ();
-  //  loc= new PVector (-100);
-  //  theta = random( 0, TWO_PI);
+  //  v= new PVector(random(0, -2), random(0, 5));
+  //  loc= new PVector (random(0, width), -100);
+  //  theta = random(TWO_PI);
+  for (int i = 0; i<count; i++) {
+    rx[i] = random(2, 5);
+    ry[i] = random(5, 10);
+    loc[i] = new PVector(random(width), random(-height, -rx[i]/2));
+    v[i] = new PVector(random(-3,3), random(5));
+    a[i] = new PVector(0.1, 0.1);
+  }
   background0 = loadImage("background0.jpg");
   background1 = loadImage("background1.jpg");
   background2 = loadImage("background2.jpg");
@@ -531,23 +543,37 @@ void draw() {
       matched = matched+1;
     }
 
-    if (matched >= 2) {
+    if (matched >= 1) {
       background(0);
       image(background12, 0, 0, width, height);
-      pushMatrix();
-      translate(loc.x, loc.y);                                             
-      rotate(theta);
-      fill(random(255), random(255), random(255));
-      rect(loc.x, loc.y, 10, 10);
-      popMatrix();
-      loc.add(v);
+      
+      //confetti
+      for (int i=0; i<count; i++) {
+        v[i].add(a[i]);
+        loc[i].add(v[i]);
+        v[i].limit(10);
+        fill(random(255), random(255), random(255));
+        rect(loc[i].x, loc[i].y, rx[i], ry[i]);
+        a[i].x = random(-.1, .1);
+        if (loc[i].y - ry[i]/2 > height) {
+          loc[i].set(random(width), random(-height, -ry[i]/2));
+          v[i].set(0, 1);
+        }
+      }
+      
+      fill(30, 24, 255, 60);
+      rect(width/2, height/2+20, 1000, 600);
       textSize(100);
+      fill(255);
       text("You win!", width/2, 200);
     }
-    if (matched < 2) {
+    if (matched < 1) {
       background(0);
       image(background13, 0, 0, width, height);
+      fill(30, 24, 255, 60);
+      rect(width/2, height/2+20, 1000, 600);
       textSize(100);
+      fill(255);
       text("You lose!", width/2, 200);
     }
     textSize(40);
@@ -559,6 +585,28 @@ void draw() {
       + ". You drove around in a \n " + carName 
       + " and had a pet " + petName + ". \n You worked as a " 
       + jobName + "\n for the rest of your life.", width/2, height/2-130);
+    
+    //restart the game
+    fill(30, 24, 255, 60);
+    rect(width-100, 35, 150, 50);
+    fill(255);
+    text("REPLAY", width-100, 50);
+    if (mousePressed) {
+      if (mouseX < width-25 && mouseX > width-175 && mouseY < 60 && mouseY > 10) {
+        screen = 0;
+      }
+    }
+    
+    //exit the game
+    fill(30, 24, 255, 60);
+    rect(width-100, 90, 150, 50);
+    fill(255);
+    text("EXIT", width-100, 105);
+    if (mousePressed) {
+      if (mouseX < width-25 && mouseX > width-175 && mouseY < 115 && mouseY > 65) {
+        exit();
+      }
+    }
   }
 }
 
@@ -582,8 +630,8 @@ int firstScreen() {
     //pick your gender: 
 
     //male button
+    rectMode(CORNER);
     fill(57, 194, 255, 170);
-    //    noStroke();
     rect(width/2-340, height/2+120, 200, 85, 7);
     fill(255);
     textSize(50);
