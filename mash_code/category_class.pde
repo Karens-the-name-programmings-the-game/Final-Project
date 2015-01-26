@@ -13,7 +13,7 @@ class category {
   category() {
 
     spousem1.append("Ginny Weasley");
-    spousem1.append("Beatrix Lestrange");
+    spousem1.append("Bellatrix Lestrange");
     spousem1.append("Cho Chang");
     spousem1.append("Fleur Delacour");
     spousem1.append("Petunia Dursley");
@@ -21,7 +21,7 @@ class category {
     spousef1.append("Harry Potter");
     spousef1.append("Lord Voldemort");
     spousef1.append("Ron Weasley");
-    spousef1.append("Sirius Black");
+    spousef1.append("Severus Snape");
     spousef1.append("Draco Malfoy");
 
     loc1.append("The Burrow");

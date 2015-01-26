@@ -1,3 +1,6 @@
+//note: because absolute coordinates were used in the code instead of relative coordinates, the positioning may be messed up if viewed in a different resolution. the original resolution is 1440 x 900.
+
+
 ArrayList <category> MASH = new ArrayList <category>();
 int screen, gender;
 String typing = new String();
@@ -57,7 +60,8 @@ void setup() {
 
 void draw() {
   noStroke();
-
+  println(width);
+  println(height);
   category mycategory = new category();
 
   //intro screen
@@ -567,7 +571,7 @@ void draw() {
       }
       
       fill(30, 24, 255, 60);
-      rect(width/2, height/2+20, 1000, 600);
+      rect(width/2, height/2-20, 1070, 700);
       textSize(100);
       fill(255);
       text("You win!", width/2, 200);
@@ -576,7 +580,7 @@ void draw() {
       background(0);
       image(background13, 0, 0, width, height);
       fill(30, 24, 255, 60);
-      rect(width/2, height/2+20, 1000, 600);
+      rect(width/2, height/2-20, 1070, 700);
       textSize(100);
       fill(255);
       text("You lose!", width/2, 200);
