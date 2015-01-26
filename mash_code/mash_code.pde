@@ -60,8 +60,7 @@ void setup() {
 
 void draw() {
   noStroke();
-  println(width);
-  println(height);
+  
   category mycategory = new category();
 
   //intro screen
