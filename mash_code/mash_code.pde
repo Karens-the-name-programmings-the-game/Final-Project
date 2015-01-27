@@ -31,16 +31,16 @@ void setup() {
   screen = 0;
   gender = 0;
   p = 0;
-  
+
   //initialize confetti
   for (int i = 0; i<count; i++) {
     rx[i] = random(2, 5);
     ry[i] = random(5, 10);
     loc[i] = new PVector(random(width), random(-height, -rx[i]/2));
-    v[i] = new PVector(random(-3,3), random(5));
+    v[i] = new PVector(random(-3, 3), random(5));
     a[i] = new PVector(0.1, 0.1);
   }
-  
+
   //initialize backgrounds
   background0 = loadImage("background0.jpg");
   background1 = loadImage("background1.jpg");
@@ -60,7 +60,7 @@ void setup() {
 
 void draw() {
   noStroke();
-  
+
   category mycategory = new category();
 
   //intro screen
@@ -93,7 +93,7 @@ void draw() {
   if (screen == 2) {
     background(0);
     image(background2, 0, 0, width, height);
-    
+
     //male
     if (gender == 1) {
       textSize(40);
@@ -123,7 +123,7 @@ void draw() {
         }
       }
     }
-    
+
     //female
     if (gender == 2) {
       textSize(40);
@@ -406,7 +406,7 @@ void draw() {
   if (screen == 11) {
     background(255);
     image(background11, 0, 0, width, height);
-    
+
     //display category titles
     textAlign(LEFT);
     textSize(32); 
@@ -554,7 +554,7 @@ void draw() {
     if (matched >= 2) {
       background(0);
       image(background12, 0, 0, width, height);
-      
+
       //confetti
       for (int i=0; i<count; i++) {
         v[i].add(a[i]);
@@ -568,7 +568,7 @@ void draw() {
           v[i].set(0, 1);
         }
       }
-      
+
       fill(30, 24, 255, 60);
       rect(width/2, height/2-20, 1070, 700);
       textSize(100);
@@ -593,7 +593,7 @@ void draw() {
       + ". You drove around in a \n " + carName 
       + " and had a pet " + petName + ". \n You worked as a " 
       + jobName + "\n for the rest of your life.", width/2, height/2-130);
-    
+
     //restart the game
     fill(30, 24, 255, 60);
     rect(width-100, 35, 150, 50);
@@ -604,7 +604,7 @@ void draw() {
         screen = 0;
       }
     }
-    
+
     //exit the game
     fill(30, 24, 255, 60);
     rect(width-100, 90, 150, 50);
@@ -661,7 +661,7 @@ int firstScreen() {
     textAlign(CENTER);
     textSize(50);
     text("female", width/2+240, height/2+182);
-    
+
     //move on to next screen
     if (mousePressed) {
       if (mouseX > width/2+140 && mouseX < width/2+340 && mouseY > height/2+120 && mouseY < height/2+205) {
@@ -712,7 +712,33 @@ void keyPressed() {
       screen = 12;
     }
   } else {
-    typing = typing + key;
+    if (screen == 2 && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5')) {
+      typing = typing + key;
+    }
+    if (screen == 3 && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5')) {
+      typing = typing + key;
+    }
+    if (screen == 4 && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5')) {
+      typing = typing + key;
+    }
+    if (screen == 5 && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5')) {
+      typing = typing + key;
+    }
+    if (screen == 6 && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5')) {
+      typing = typing + key;
+    }
+    if (screen == 7 && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5')) {
+      typing = typing + key;
+    }
+    if (screen == 8 && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5')) {
+      typing = typing + key;
+    }
+    if (screen == 9 && (key == '1' || key == '2' || key == '3' || key == '4')) {
+      typing = typing + key;
+    }
+    if (screen == 10 && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5' || key == '6' || key == '7' || key == '8' || key == '9' || key == '0')) {
+      typing = typing + key;
+    }
   }
 }
 
